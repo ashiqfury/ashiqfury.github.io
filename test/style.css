@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+	/* main background */
+	--clr-very-dark-blue: hsl(233, 47%, 7%);
+	/* card background */
+	--clr-dark-desaturated-blue: hsl(244, 38%, 16%);
+	/* accent */
+	--clr-soft-voilet: hsl(277, 64%, 61%);
+
+	/* main heading, stats */
+	--clr-white: hsl(0, 0%, 100%);
+	/* main paragraph */
+	--clr-light-white: hsl(0, 0%, 100%, 0.75);
+	/* stat headings */
+	--clr-very-light-white: hsl(0, 0%, 100%, 0.6);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lexend Deca', sans-serif;
+	font-family: 'Inter', sans-serif;
+	color: var(--clr-white);
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font-size: 15px;
+	display: grid;
+	place-items: center;
+	background: var(--clr-very-dark-blue);
+}
+
+.bodyContainer {
+	width: 800px;
+	height: 320px;
+	height: auto;
+	display: flex;
+	background: var(--clr-dark-desaturated-blue);
+	border-radius: 10px;
+}
+.leftContainer {
+	width: 50%;
+	height: auto;
+	display: grid;
+	padding: 40px;
+	margin-right: 10px;
+}
+.leftTopText {
+	font-size: 28px;
+	margin-bottom: 25px;
+}
+.leftTopText span {
+	color: var(--clr-soft-voilet);
+}
+
+.leftCenterText {
+	font-size: 13px;
+	margin-bottom: 50px;
+	color: var(--clr-light-white);
+	line-height: 1.7em;
+}
+
+.leftBottom {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+}
+.statValue {
+	font-size: 20px;
+}
+.statTitle {
+	font-size: 10px;
+	text-transform: uppercase;
+	color: var(--clr-very-light-white);
+	margin-top: 5px;
+}
+.rightContainer {
+	position: relative;
+	width: 50%;
+	height: auto;
+}
+.rightImg {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 0 10px 10px 0;
+}
+.color {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgb(170, 92, 219, 0.7);
+	filter: hue-rotate(0deg) brightness(0.5);
+}
+
+@media screen and (max-width: 375px) {
+	.bodyContainer {
+		display: grid;
+		max-width: 375px;
+	}
+	.leftContainer {
+		max-width: 375px;
+		width: 375px;
+		height: auto;
+		order: 2;
+	}
+	.rightContainer {
+		max-width: 375px;
+		width: 375px;
+		height: auto;
+		order: 1;
+	}
+	.leftBottom {
+		display: grid;
+	}
+	.statTitle {
+		margin-bottom: 20px;
+	}
+	.rightImg {
+		border-radius: 10px 10px 0 0;
+	}
+}
