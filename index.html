@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Frontend Mentor | Tip calculator app | Ashiq Fury</title>
+	</head>
+	<body>
+		<div class="bodyContainer">
+			<div class="topHeader">
+				SPLI <br />
+				TTER
+			</div>
+
+			<div class="bottomContent">
+				<div class="inputsContainer">
+					<div class="topInput">
+						<label for="billInput">Bill</label>
+						<div class="inputContainer">
+							<img src="./images/icon-dollar.svg" class="dollorLogo" />
+							<input type="number" id="billInput" />
+						</div>
+					</div>
+
+					<div class="middleInput">
+						<label for="">Select Tip %</label>
+
+						<div class="tileContainer">
+							<form name="myForm">
+								<input
+									type="radio"
+									id="5"
+									name="radio"
+									value="5"
+									class="radioInput"
+								/>
+								<label for="5" class="tile">5%</label>
+								<input
+									type="radio"
+									id="10"
+									name="radio"
+									value="10"
+									class="radioInput"
+								/>
+								<label for="10" class="tile">10%</label>
+								<input
+									type="radio"
+									id="15"
+									name="radio"
+									value="15"
+									class="radioInput"
+								/>
+								<label for="15" class="tile">15%</label>
+								<input
+									type="radio"
+									id="25"
+									name="radio"
+									value="25"
+									class="radioInput"
+								/>
+								<label for="25" class="tile">25%</label>
+								<input
+									type="radio"
+									id="50"
+									name="radio"
+									value="50"
+									class="radioInput"
+								/>
+								<label for="50" class="tile">50%</label>
+								<input
+									type="number"
+									class="tipInput tile"
+									placeholder="custom"
+								/>
+							</form>
+						</div>
+					</div>
+
+					<div class="bottomInput">
+						<div class="messageFlex">
+							<label for="peopleInput">Number of People</label>
+							<p class="errorMsg hider">Can't be zero</p>
+						</div>
+						<div class="inputContainer">
+							<img src="./images/icon-person.svg" class="personLogo" />
+							<input type="number" id="peopleInput" />
+						</div>
+					</div>
+				</div>
+
+				<div class="outputsContainer">
+					<div class="topOutputs">
+						<div class="outputs">
+							<div class="label">
+								<span>Tip Amount</span>
+								<p>/ person</p>
+							</div>
+							<div class="amount perPerson">
+								<span>$0.00</span>
+							</div>
+						</div>
+
+						<div class="outputs">
+							<div class="label">
+								<span>Total</span>
+								<p>/ person</p>
+							</div>
+							<div class="amount totalPerson">
+								<span>$0.00</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="buttonContainer">
+						<button class="reset">RESET</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by
+				<a href="https://www.github.com/ashiqfury" target="_blank">Ashiq Fury</a
+				>.
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
