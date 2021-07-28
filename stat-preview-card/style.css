@@ -60,7 +60,7 @@ body {
 
 .leftCenterText {
 	font-size: 13px;
-	margin-bottom: 50px;
+	margin-bottom: 60px;
 	color: var(--clr-light-white);
 	line-height: 1.7em;
 }
@@ -79,6 +79,7 @@ body {
 	text-transform: uppercase;
 	color: var(--clr-very-light-white);
 	margin-top: 5px;
+	font-weight: 600;
 }
 .rightContainer {
 	position: relative;
@@ -99,6 +100,17 @@ body {
 	right: 0;
 	background: rgb(170, 92, 219, 0.7);
 	filter: hue-rotate(0deg) brightness(0.5);
+}
+
+.attribution {
+	margin: 10px auto;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	font-weight: 700;
+	color: var(--clr-soft-voilet);
+	text-decoration: none;
 }
 
 @media screen and (max-width: 375px) {
