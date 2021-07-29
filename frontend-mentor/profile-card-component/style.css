@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+:root {
+	--clr-dark-cyan: hsl(185, 75%, 39%);
+	--clr-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--clr-dark-grayish-blue: hsl(227, 10%, 46%);
+
+	--clr-dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	background-color: var(--clr-dark-cyan);
+	font-family: 'Kumbh Sans', sans-serif;
+	overflow: hidden;
+}
+
+.bgImgTop,
+.bgImgBottom {
+	position: absolute;
+	width: 1000px;
+	height: 1000px;
+}
+.bgImgTop {
+	top: -80%;
+	left: -40%;
+}
+.bgImgBottom {
+	bottom: -80%;
+	right: -30%;
+}
+
+.bodyContainer {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.cardTop {
+	width: 100%;
+	height: 160px;
+	flex: 1;
+}
+.cardTopImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 20px 20px 0 0;
+}
+.cardCenter {
+	position: absolute;
+	height: 0;
+	top: 27%;
+	left: 50%;
+	transform: translate(-60%);
+	border-radius: 50%;
+}
+.personImg {
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 0 0 0 5px #fff;
+}
+
+.cardBottom {
+	display: grid;
+	flex: 1.5;
+}
+.cardBottomTop {
+	text-align: center;
+	padding: 70px 0 30px;
+	width: 100%;
+	border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+.name {
+	font-weight: 700;
+	display: inline;
+	font-size: 18px;
+	color: var(--clr-very-dark-desaturated-blue);
+}
+.age {
+	font-size: 18px;
+	color: var(--clr-dark-grayish-blue);
+	margin-left: 5px;
+}
+.city {
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	color: var(--clr-dark-grayish-blue);
+	margin-top: 10px;
+}
+.cardBottomBottom {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 35px;
+	text-align: center;
+}
+.stat {
+	font-size: 22px;
+	color: var(--clr-very-dark-desaturated-blue);
+	line-height: 10px;
+	font-weight: 700;
+}
+.desc {
+	font-weight: 700;
+	font-size: 12px;
+	color: var(--clr-dark-grayish-blue);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: crimson;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+@media screen and (max-width: 375px) {
+	.bodyContainer {
+		width: 100%;
+	}
+}
