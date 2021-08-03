@@ -566,12 +566,7 @@ footer {
 		display: none;
 	}
 	.navlinks li {
-		/* margin-right: 20px; */
-		/* cursor: pointer; */
 		color: #000;
-		/* position: relative; */
-		/* padding: 20px; */
-		/* transition: 150ms; */
 	}
 	.arrowLight {
 		display: none;
@@ -594,13 +589,9 @@ footer {
 	.dropdown {
 		position: relative;
 		width: 200px;
-		/* list-style: none; */
 		padding: 10px 20px;
-		/* background: #fff; */
-		/* border-radius: 5px; */
 		top: 10px;
 		left: 10px;
-		/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.05), 0 0 20px rgba(0, 0, 0, 0.05); */
 		box-shadow: none;
 		background: rgba(0, 0, 0, 0.05);
 	}
