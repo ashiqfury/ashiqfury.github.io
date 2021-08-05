@@ -1,0 +1,39 @@
+$mobile: 375px;
+$desktop: 1440px;
+
+// primary colors
+
+// sub-heading at the top of the app UI
+$paleVoilet: hsl(276, 100%, 81%);
+// chat on the left
+$moderateVoilet: hsl(276, 55%, 52%);
+// chat on the right
+$desaturatedDarkVoilet: hsl(271, 15%, 43%);
+// placeholder text
+$grayishBlue: hsl(206, 6%, 79%);
+// main heading
+$veryDarkDesaturatedVoilet: hsl(271, 36%, 24%);
+// paragraph
+$darkGrayishVoilet: hsl(270, 7%, 64%);
+
+// Gradients
+
+$lightMagenta: hsl(293, 100%, 63%);
+$lightVoilet: hsl(264, 100%, 61%);
+
+// secondary colors
+
+$white: hsl(0, 0%, 100%);
+// app background
+$lightGrayishVoilet: hsl(270, 20%, 96%);
+// submit button background
+$veryDarkDesaturatedVoilet: hsl(271, 36%, 24%);
+// radio button outline
+$veryLightMagenta: hsl(289, 100%, 72%);
+
+// fonts
+
+$font: 'Rubik', sans-serif;
+$font-light: 400;
+$font-medium: 500;
+$font-heavy: 700;
