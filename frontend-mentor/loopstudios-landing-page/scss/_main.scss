@@ -1,0 +1,71 @@
+.main {
+	width: 100%;
+	height: 100%;
+	min-height: 530px;
+	padding: 100px;
+	position: relative;
+
+	@media screen and (max-width: $mobile) {
+		padding: 100px 20px;
+	}
+
+	.mainImgContainer {
+		width: 731px;
+		height: 500px;
+		position: relative;
+		margin: 0;
+		top: 0;
+		left: 0;
+
+		@media screen and (max-width: $mobile) {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 30px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+	.mainTextContainer {
+		width: 520px;
+		height: 300px;
+		position: absolute;
+		right: 100px;
+		bottom: 100px;
+		background: $white;
+		padding: 70px 30px 0 70px;
+
+		@media screen and (max-width: $mobile) {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			left: 0;
+			padding: 30px 20px;
+			text-align: center;
+		}
+
+		h3 {
+			font-size: 42px;
+			font-family: $font2;
+			text-transform: uppercase;
+			font-weight: $font-light;
+			margin-bottom: 30px;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 32px;
+				margin-bottom: 20px;
+			}
+		}
+		p {
+			color: $darkGray;
+			font-size: 14px;
+			line-height: 1.5rem;
+		}
+	}
+}

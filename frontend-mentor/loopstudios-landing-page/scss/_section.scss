@@ -1,0 +1,120 @@
+.section {
+	width: 100%;
+	height: auto;
+	padding: 0 100px 100px;
+
+	@media screen and (max-width: $mobile) {
+		padding: 20px;
+		.desktop {
+			display: none;
+		}
+		.mobile {
+			display: block;
+		}
+	}
+
+	.sectionHeading {
+		width: 100%;
+		padding-bottom: 50px;
+		@include flex(center, space-between);
+
+		h3 {
+			text-transform: uppercase;
+			font-family: $font2;
+			font-size: 38px;
+			font-weight: $font-light;
+
+			@media screen and (max-width: $mobile) {
+				text-align: center;
+			}
+		}
+	}
+
+	.sectionGallery {
+		width: 100%;
+		height: auto;
+		@include flex(center, space-between);
+		flex-wrap: wrap;
+
+		@media screen and (max-width: $mobile) {
+			flex-direction: column;
+		}
+
+		.sectionWrapper {
+			width: 250px;
+			height: 450px;
+			position: relative;
+			margin-bottom: 15px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+			color: $white;
+			cursor: pointer;
+
+			@media screen and (max-width: $mobile) {
+				width: 300px;
+				height: 110px;
+				margin-bottom: 30px;
+			}
+
+			.imgWrapper {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+
+				.img {
+					object-fit: cover;
+					filter: contrast(1.2) brightness(0.8) grayscale(0.2);
+
+					@media screen and (max-width: $mobile) {
+						width: 300px;
+					}
+				}
+			}
+
+			.imgTextWrapper {
+				min-width: min-content;
+				width: fit-content;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				padding: 30px;
+				z-index: 10;
+
+				@media screen and (max-width: $mobile) {
+					width: 130px;
+					padding: 0 0 20px 20px;
+				}
+
+				.imgText {
+					font-family: $font2;
+					font-weight: $font-light;
+					font-size: 32px;
+					text-transform: uppercase;
+
+					@media screen and (max-width: $mobile) {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+
+	.mobile {
+		margin: 0 auto;
+		background: $white;
+
+		&:hover {
+			color: $white;
+			background: $black;
+		}
+	}
+}
+
+.imgWrapper:hover {
+	opacity: 0.6;
+}
+
+.imgWrapper:hover + .imgTextWrapper {
+	color: $black;
+}

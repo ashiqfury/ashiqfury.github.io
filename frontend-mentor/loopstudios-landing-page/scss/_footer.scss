@@ -1,0 +1,127 @@
+footer {
+	width: 100%;
+	height: auto;
+	background: $black;
+
+	.footerWrapper {
+		color: $white;
+		@include flex(center, space-between);
+		padding: 30px 100px;
+		font-family: $font1;
+
+		@media screen and (max-width: $mobile) {
+			padding: 30px 20px;
+			flex-direction: column;
+		}
+
+		.footerLeft {
+			flex: 1;
+
+			h4 {
+				@media screen and (max-width: $mobile) {
+					text-align: center;
+				}
+
+				.footerLogo {
+					width: 120px;
+				}
+			}
+
+			.footerLinks {
+				@include flex(center, space-between);
+				width: 60%;
+				margin-top: 20px;
+				list-style: none;
+				font-size: 12px;
+
+				@media screen and (max-width: $mobile) {
+					flex-direction: column;
+					width: 100%;
+					font-size: 14px;
+				}
+
+				.footerLink {
+					cursor: pointer;
+					margin-bottom: 20px;
+					border-bottom: 2px solid $black;
+					padding-bottom: 2px;
+
+					&:hover {
+						border-bottom: 2px solid $white;
+					}
+				}
+			}
+		}
+
+		.footerRight {
+			flex: 1;
+
+			.socialLinks {
+				@include flex(center, flex-end);
+
+				@media screen and (max-width: $mobile) {
+					@include flex(center, space-evenly);
+					margin-top: 30px;
+				}
+
+				.socialLink {
+					width: 18px;
+					height: auto;
+					margin-left: 15px;
+					cursor: pointer;
+					padding-bottom: 4px;
+					border-bottom: 2px solid $black;
+					transition: 150ms;
+
+					@media screen and (max-width: $mobile) {
+						width: 22px;
+					}
+
+					&:hover {
+						border-bottom: 2px solid $white;
+					}
+				}
+			}
+
+			.credits {
+				text-align: right;
+				color: $darkGray;
+				margin-top: 20px;
+				font-size: 12px;
+
+				@media screen and (max-width: $mobile) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+		padding-bottom: 20px;
+		color: hsl(0, 0%, 55%);
+		font-size: 10px;
+		letter-spacing: 1px;
+		font-family: $font2;
+		font-weight: $font-light;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 8px;
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+			transition: 150ms;
+			font-weight: $font-medium;
+			padding-bottom: 3px;
+			transition: 150ms;
+
+			&:hover {
+				color: cyan;
+				border-bottom: 1.5px solid cyan;
+			}
+		}
+	}
+}

@@ -1,0 +1,152 @@
+.header {
+	width: 100%;
+	height: 100%;
+	// min-height: 430px;
+	position: relative;
+
+	@media screen and (max-width: $mobile) {
+		height: 550px;
+		.mobile {
+			display: block;
+		}
+	}
+
+	.bgContainer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+
+		.heroImg {
+			object-fit: cover;
+			width: 100%;
+			height: auto;
+			filter: saturate(1.2) brightness(0.5);
+
+			@media screen and (max-width: $mobile) {
+				height: 100%;
+			}
+		}
+	}
+
+	.nav {
+		@include flex(center, space-between);
+		padding: 40px 100px;
+		z-index: 100;
+		position: relative;
+
+		@media screen and (max-width: $mobile) {
+			padding: 30px 20px;
+
+			.mobile {
+				display: block;
+			}
+		}
+
+		.logo {
+			@media screen and (max-width: $mobile) {
+				width: 130px;
+			}
+		}
+
+		.navlinks {
+			width: 40%;
+			@include flex(center, space-between);
+			list-style: none;
+
+			@media screen and (max-width: $mobile) {
+				display: none;
+			}
+
+			.navlink {
+				color: $white;
+				font-size: 14px;
+				cursor: pointer;
+				transition: 150ms;
+			}
+		}
+	}
+
+	.hero {
+		margin: 100px;
+		border: 2px solid $white;
+		max-width: 600px;
+		padding: 30px;
+
+		@media screen and (max-width: $mobile) {
+			margin: 80px 20px;
+			padding: 20px;
+			min-width: min-content;
+			// max-width: 320px;
+		}
+
+		.heroText {
+			font-family: $font2;
+			color: $white;
+			text-transform: uppercase;
+			font-weight: $font-light;
+			font-size: 62px;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 40px;
+			}
+		}
+	}
+}
+
+.navlink::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: $white;
+	display: block;
+	margin: auto;
+	transition: 150ms;
+}
+
+// Mobile navigation.
+.mobileNav {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	right: 0;
+	bottom: 0;
+	background: $black;
+	z-index: 15;
+	padding: 20px;
+	transition: 350ms;
+	opacity: 0;
+
+	ul {
+		list-style: none;
+		margin: 150px 0;
+
+		li {
+			color: $darkGray;
+			font-size: 24px;
+			text-transform: uppercase;
+			font-family: $font2;
+			font-weight: $font-light;
+			margin-bottom: 20px;
+			cursor: pointer;
+			transition: 100ms;
+
+			&:hover {
+				color: $white;
+				font-weight: 300;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+.navlink:hover::after {
+	width: 95%;
+}
+
+.menu {
+	cursor: pointer;
+	z-index: 15;
+}
