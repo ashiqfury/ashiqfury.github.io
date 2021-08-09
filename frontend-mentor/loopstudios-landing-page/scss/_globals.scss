@@ -16,6 +16,11 @@ body {
 	font-family: $font1;
 	background: $white;
 	overflow-x: hidden;
+
+	@media screen and (max-width: $mobile) {
+		height: auto;
+		overflow-y: auto;
+	}
 }
 
 .bodyContainer {
