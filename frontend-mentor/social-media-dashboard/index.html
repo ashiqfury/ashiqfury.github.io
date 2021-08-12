@@ -55,9 +55,9 @@
 					<p class="trend">1099 Today</p>
 				</div>
 				<div class="gridItem mainItem mainItem4">
-					<p class="user">Nathan F./p></p>
+					<p class="user">Nathan F.</p>
 					<h2 class="count">8239</h2>
-					<p class="follow">Followers</p>
+					<p class="follow">Subscribers</p>
 					<p class="trend">144 Today</p>
 				</div>
 			</main>
@@ -149,8 +149,6 @@
 			</section>
 		</div>
 
-		<script src="index.js"></script>
-
 		<div class="attribution">
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -158,5 +156,19 @@
 			>. Coded by
 			<a href="https://www.github.com/ashiqfury" target="_blank">Ashiq Fury</a>.
 		</div>
+
+		<script src="index.js"></script>
+		<script src="	https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+		<script>
+			anime({
+				targets: '.gridItem',
+				loop: false,
+				scale: [
+					{ value: 0.4, easing: 'easeOutSine', duration: 200 },
+					{ value: 1, easing: 'easeInOutQuad', duration: 100 },
+				],
+				delay: anime.stagger(50, { grid: [14, 5], from: 'center' }),
+			});
+		</script>
 	</body>
 </html>

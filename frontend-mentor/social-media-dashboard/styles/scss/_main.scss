@@ -7,7 +7,7 @@
 		grid-template-columns: repeat(4, 1fr);
 	}
 
-	@media screen and (min-width: $mobile) and (max-width: 768px) {
+	@media screen and (min-width: 376) and (max-width: 768px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
