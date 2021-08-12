@@ -1,0 +1,67 @@
+.overview {
+	width: 100%;
+	margin-top: 30px;
+
+	.sectionHeading {
+		color: $white;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.grid {
+		gap: 15px;
+
+		.sectionItem {
+			width: 100%;
+			background: $darkDesaturatedBlue;
+			padding: 20px;
+			border-radius: 5px;
+
+			.sectionItemTop {
+				padding: 5px 0 7px;
+
+				span {
+					color: $desaturatedBlue;
+					font-size: 10px;
+					font-weight: $font-medium;
+				}
+				img {
+					float: right;
+				}
+			}
+			.sectionItemBottom {
+				padding: 7px 0 5px;
+				display: flex;
+				align-items: flex-end;
+				justify-content: space-between;
+
+				.sectionCount {
+					color: $white;
+					font-size: 24px;
+					font-weight: $font-medium;
+				}
+				.sectionPercent {
+					font-size: 8px;
+					color: $limeGreen;
+					line-height: 100%;
+
+					&::before {
+						content: url('../../images/icon-up.svg');
+						padding: 0 2px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sectionItem.sectionItem2,
+.sectionItem.sectionItem7,
+.sectionItem.sectionItem8 {
+	.sectionPercent {
+		color: $brightRed;
+		&::before {
+			content: url('../../images/icon-down.svg');
+		}
+	}
+}

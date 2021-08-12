@@ -1,0 +1,117 @@
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+
+	@media screen and (min-width: 768px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media screen and (min-width: $mobile) and (max-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.mainItem {
+		width: 100%;
+		text-align: center;
+		background: $darkDesaturatedBlue;
+		padding: 15px;
+		border-radius: 5px;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 4px;
+			background: $facebook;
+			border-radius: 5px 5px 0 0;
+		}
+
+		.user {
+			color: $desaturatedBlue;
+			font-size: 12px;
+			opacity: 0.8;
+
+			&::before {
+				content: url('../../images/icon-facebook.svg');
+				width: 5px;
+				padding: 0 5px;
+				position: relative;
+				top: 5px;
+			}
+		}
+		.count {
+			font-size: 46px;
+			color: $white;
+			padding: 20px 0 0;
+		}
+		.follow {
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			color: $desaturatedBlue;
+			font-size: 12px;
+			opacity: 0.8;
+		}
+		.trend {
+			color: $limeGreen;
+			font-size: 10px;
+			padding: 20px;
+			font-weight: $font-medium;
+
+			&::before {
+				content: url('../../images/icon-up.svg');
+				// width: 5px;
+				padding: 0 5px;
+				position: relative;
+				bottom: 2px;
+			}
+		}
+	}
+}
+
+.mainItem.mainItem2 {
+	&::before {
+		background: $twitter;
+	}
+	.user::before {
+		content: url('../../images/icon-twitter.svg');
+	}
+
+	.trend {
+		color: $limeGreen;
+	}
+}
+
+.mainItem.mainItem3 {
+	&::before {
+		background: $instagram;
+	}
+	.user::before {
+		content: url('../../images/icon-instagram.svg');
+	}
+
+	.trend {
+		color: $limeGreen;
+	}
+}
+
+.mainItem.mainItem4 {
+	&::before {
+		background: $youTube;
+	}
+	.user::before {
+		content: url('../../images/icon-youtube.svg');
+	}
+
+	.trend {
+		color: $brightRed;
+
+		&::before {
+			content: url('../../images/icon-down.svg');
+		}
+	}
+}

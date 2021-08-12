@@ -1,0 +1,61 @@
+body.light {
+	background: $white;
+	.bg {
+		background: $veryPaleBlue;
+	}
+}
+body.light {
+	.header {
+		.headingText {
+			h1 {
+				color: $veryDarkBlue;
+			}
+			p {
+				color: $darkGrayishBlue;
+			}
+		}
+		.theme {
+			span {
+				color: $darkGrayishBlue;
+			}
+			label {
+				background: $lightToggle;
+				&::after {
+					background: $white;
+				}
+			}
+		}
+	}
+}
+
+body.light {
+	.grid {
+		.sectionItem,
+		.mainItem {
+			background: $lightGrayishBlue;
+
+			.user,
+			.follow {
+				color: $darkDesaturatedBlue;
+			}
+			.count {
+				color: $veryDarkBlue;
+			}
+		}
+	}
+}
+
+body.light {
+	.sectionHeading {
+		color: $darkGrayishBlue;
+	}
+	.sectionItem {
+		span {
+			color: $darkGrayishBlue;
+		}
+	}
+}
+
+body.light .overview .grid .sectionItem .sectionCount {
+	color: $veryDarkBlue;
+}

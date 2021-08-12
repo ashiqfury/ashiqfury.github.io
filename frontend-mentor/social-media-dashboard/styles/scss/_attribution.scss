@@ -1,0 +1,38 @@
+.attribution {
+	font-size: 10px;
+	text-align: center;
+	color: white;
+
+	a {
+		color: hsl(356, 69%, 56%) !important;
+		text-decoration: none;
+		letter-spacing: 1px;
+		font-weight: 700;
+		position: relative;
+		padding: 0 2px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			display: inline-block;
+			width: 0;
+			bottom: -2px;
+			left: 0;
+			height: 2px;
+			background: linear-gradient(
+				to right,
+				hsl(37, 97%, 70%),
+				hsl(329, 70%, 58%)
+			);
+			transition: 150ms;
+		}
+	}
+}
+
+.attribution a:hover::after {
+	width: 100%;
+}
+
+body.light .attribution {
+	color: hsl(230, 17%, 14%);
+}
