@@ -1,0 +1,178 @@
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  font-family: "Kumbh Sans", sans-serif;
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.container {
+  width: 90%;
+  min-height: 80vh;
+  background: #fff;
+  border-radius: 20px;
+  margin: 150px auto;
+  background-repeat: no-repeat;
+}
+.container .desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .container {
+    width: 70%;
+    display: flex;
+    height: auto;
+  }
+  .container .desktop {
+    display: block;
+  }
+  .container .mobile {
+    display: none;
+  }
+}
+.container .imageContainer {
+  position: relative;
+  min-height: 150px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .container .imageContainer {
+    min-width: 50%;
+  }
+}
+.container .imageContainer .desktopHeroContainer {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.container .imageContainer .hero {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .container .imageContainer .hero {
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+}
+.container .imageContainer .box {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+.patternContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.patternContainer img {
+  width: 200%;
+  position: absolute;
+  transform: translate(-55%, -27%);
+}
+
+.accordionContainer {
+  width: 100%;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .accordionContainer {
+    padding: 50px 50px 30px 0;
+    margin-top: 40px;
+  }
+}
+.accordionContainer h1 {
+  text-align: center;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .accordionContainer h1 {
+    text-align: left;
+    padding-left: 20px;
+  }
+}
+.accordionContainer .accordions {
+  padding: 20px;
+}
+.accordionContainer .accordions .accordion {
+  position: relative;
+  border-bottom: 1.5px solid #e7e7e9;
+  padding: 15px 0;
+}
+.accordionContainer .accordions .accordion .accordion__headWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 150ms;
+}
+.accordionContainer .accordions .accordion .accordion__headWrapper .accordion__heading {
+  color: #4a4b5e;
+  font-size: 14px;
+}
+.accordionContainer .accordions .accordion .accordion__headWrapper .accordion__heading:hover {
+  color: #1d1e35;
+}
+.accordionContainer .accordions .accordion .accordion__headWrapper img {
+  transition: 150ms;
+}
+.accordionContainer .accordions .accordion .accordion__dropdown {
+  position: absolute;
+  width: 90%;
+  font-size: 12px;
+  top: 10px;
+  top: -30px;
+  color: #787887;
+  line-height: 1rem;
+  padding: 0 0 10px;
+  transition: all 150ms;
+  opacity: 0;
+}
+.accordionContainer .accordions .accordion .accordion__dropdown.active {
+  position: relative;
+  top: 10px;
+  opacity: 1;
+}
+
+.accordionContainer .accordions .accordion .accordion__headWrapper.active .accordion__heading {
+  color: #1d1e35;
+  font-weight: 700;
+}
+.accordionContainer .accordions .accordion .accordion__headWrapper.active img {
+  transform: rotate(180deg);
+}
+
+/*# sourceMappingURL=styles.css.map */
