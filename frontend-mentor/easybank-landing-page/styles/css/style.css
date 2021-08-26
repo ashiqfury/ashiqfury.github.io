@@ -235,7 +235,7 @@ main.active::after {
 }
 main .hero__img {
   flex-basis: 50%;
-  background-image: url("./images/bg-intro-mobile.svg");
+  background-image: url("../../images/bg-intro-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: top right;
@@ -244,7 +244,7 @@ main .hero__img {
 }
 @media only screen and (min-width: 768px) {
   main .hero__img {
-    background-image: url("./images/bg-intro-desktop.svg");
+    background-image: url("../../images/bg-intro-desktop.svg");
     background-size: 130% auto;
     background-position: top -170px right -200px;
     height: 450px;
