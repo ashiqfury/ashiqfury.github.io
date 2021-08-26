@@ -1,0 +1,141 @@
+header {
+	position: relative;
+	width: 100%;
+	height: 50px;
+	padding: 20px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: $veryLightGray;
+	z-index: 10;
+	box-shadow: 10px 0 10px rgba(0, 0, 0, 0.15);
+	@media only screen and (min-width: 768px) {
+		padding: 30px 10%;
+	}
+
+	.header-logo {
+		width: 40%;
+		height: auto;
+		@media only screen and (min-width: 768px) {
+			width: auto;
+		}
+	}
+
+	.nav-links {
+		position: absolute;
+		width: 80%;
+		height: 250px;
+		padding: 20px 30px 25px;
+		background: $white;
+		list-style: none;
+		text-align: center;
+		color: $darkBlue;
+		border-radius: 7px;
+		left: 10%;
+		top: -300px;
+		transition: 250ms ease-in;
+		z-index: 0;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		&.active {
+			left: 10%;
+			top: 80px;
+		}
+
+		.nav-link {
+			position: relative;
+			padding: 15px 0 5px;
+			font-size: 16px;
+			cursor: pointer;
+			width: min-content;
+
+			&::after {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 3px;
+				left: 50%;
+				bottom: 0;
+				background: $limeGreen;
+				transition: 250ms;
+			}
+			&:hover::after {
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	@media only screen and (min-width: 768px) {
+		.header__nav {
+			width: 35%;
+
+			.nav-links {
+				flex-direction: row;
+				justify-content: space-between;
+				list-style: none;
+				position: static;
+				width: 100%;
+				background: transparent;
+				height: auto;
+				padding: 0;
+
+				.nav-link {
+					padding: 22px 0;
+					cursor: pointer;
+					color: $wrayishBlue;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+header .header__menu {
+	position: relative;
+	width: 25px;
+	height: auto;
+
+	div {
+		position: relative;
+		width: 100%;
+		height: 2px;
+		background: black;
+		margin-bottom: 5px;
+		border-radius: 2px;
+		transition: 250ms;
+	}
+	div:last-child {
+		margin: 0;
+	}
+}
+
+header .header__menu.active {
+	.stick-1 {
+		top: 3px;
+		transform: rotate(225deg);
+	}
+	.stick-2 {
+		display: none;
+	}
+	.stick-3 {
+		bottom: 3px;
+		transform: rotate(-225deg);
+	}
+}
+
+.header__menu {
+	cursor: pointer;
+}
+.hamburger,
+.close {
+	display: none;
+}
+.hamburger.active,
+.close.active {
+	display: block;
+}

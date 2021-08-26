@@ -1,0 +1,88 @@
+main {
+	width: 100%;
+	height: auto;
+	background: linear-gradient(to bottom, $lightGrayishBlue, $veryLightGray);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 40%, transparent 100%);
+		z-index: 5;
+		opacity: 0;
+		visibility: none;
+		transition: 250ms ease-in;
+	}
+	&.active::after {
+		right: 0;
+		bottom: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+	@media only screen and (min-width: 768px) {
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+	.hero__img {
+		flex-basis: 50%;
+		background-image: url('/images/bg-intro-mobile.svg');
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: top right;
+		height: 350px;
+		width: 100%;
+		@media only screen and (min-width: 768px) {
+			background-image: url('/images/bg-intro-desktop.svg');
+			background-size: 130% auto;
+			background-position: top -170px right -200px;
+			height: 450px;
+		}
+		img {
+			width: 360px;
+			height: auto;
+			position: relative;
+			top: -85px;
+			@media only screen and (min-width: 768px) {
+				width: 85%;
+				top: -100px;
+				right: -170px;
+			}
+		}
+	}
+
+	.hero__text {
+		flex-basis: 50%;
+		padding: 0 30px 30px;
+		height: 370px;
+		text-align: center;
+		@media only screen and (min-width: 768px) {
+			padding: 0 50px 30px 125px;
+			height: auto;
+			text-align: left;
+		}
+
+		.hero__text--heading {
+			font-size: 42px;
+			color: $darkBlue;
+			font-weight: $fontLight;
+			@media only screen and (min-width: 768px) {
+				font-size: 52px;
+			}
+		}
+		.hero__text--para {
+			font-size: 0.86rem;
+			color: $wrayishBlue;
+			line-height: 1.5rem;
+			padding: 20px 0 40px;
+			@media only screen and (min-width: 768px) {
+				font-size: 1.15rem;
+				padding: 20px 0 40px;
+			}
+		}
+	}
+}
