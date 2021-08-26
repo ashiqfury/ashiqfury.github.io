@@ -1,0 +1,104 @@
+*,
+*::before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	height: auto;
+	font-family: $font;
+	background: linear-gradient(to bottom, $softViolet, $softBlue);
+
+	@media screen and (min-width: 768px) and (max-width: $desktop) {
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.container {
+	width: 90%;
+	min-height: 80vh; //testing..
+	background: #fff;
+	border-radius: 20px;
+	margin: 150px auto;
+	background-repeat: no-repeat;
+
+	.desktop {
+		display: none;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: $desktop) {
+		width: 70%;
+		display: flex;
+		height: auto;
+		.desktop {
+			display: block;
+		}
+		.mobile {
+			display: none;
+		}
+	}
+
+	.imageContainer {
+		position: relative;
+		min-height: 150px;
+
+		@media screen and (min-width: 768px) and (max-width: $desktop) {
+			min-width: 50%;
+		}
+		.desktopHeroContainer {
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			overflow: hidden;
+		}
+		.hero {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			// filter: drop-shadow(0 30px 0 rgba(0, 0, 0, 0.15));
+
+			@media screen and (min-width: 768px) and (max-width: $desktop) {
+				top: 50%;
+				left: 35%;
+				transform: translate(-50%, -50%);
+				// filter: drop-shadow(0 80px 0 rgba(0, 0, 0, 0.15));
+			}
+		}
+		.box {
+			position: absolute;
+			top: 60%;
+			left: 0;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.patternContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+
+	img {
+		width: 200%;
+		position: absolute;
+		transform: translate(-55%, -27%);
+	}
+}
