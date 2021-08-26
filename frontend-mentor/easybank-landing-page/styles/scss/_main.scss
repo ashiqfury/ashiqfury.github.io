@@ -30,14 +30,14 @@ main {
 	}
 	.hero__img {
 		flex-basis: 50%;
-		background-image: url('/images/bg-intro-mobile.svg');
+		background-image: url('./images/bg-intro-mobile.svg');
 		background-repeat: no-repeat;
 		background-size: 100% auto;
 		background-position: top right;
 		height: 350px;
 		width: 100%;
 		@media only screen and (min-width: 768px) {
-			background-image: url('/images/bg-intro-desktop.svg');
+			background-image: url('./images/bg-intro-desktop.svg');
 			background-size: 130% auto;
 			background-position: top -170px right -200px;
 			height: 450px;
