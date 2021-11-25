@@ -53,6 +53,6 @@ I am in the path of learning TailwindCSS, after that I will recreate this soluti
 
 ## Author
 
-- Github - [](https://github.com/ashiqfury)
+- Github - [@ashiqfury](https://github.com/ashiqfury)
 - Frontend Mentor - [@ashiqfury](https://www.frontendmentor.io/profile/ashiqfury)
 - Instagram - [@_a.s.h.i.q\_\_f.u.r.y_](https://www.instagram.com/_a.s.h.i.q__f.u.r.y_)
