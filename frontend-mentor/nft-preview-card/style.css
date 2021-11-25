@@ -1,0 +1,145 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(217, 54%, 11%);
+	font-family: 'Outfit';
+}
+
+.container {
+	width: 300px;
+	background-color: hsl(216, 50%, 16%);
+	padding: 20px;
+	border-radius: 20px;
+	color: white;
+	box-shadow: 0 25px 5px 20px rgba(0, 0, 0, 0.1), 0 20px 5px 45px rgba(0, 0, 0, 0.05);
+}
+
+.img-container {
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+}
+.img-container::after {
+	content: url('./images/icon-view.svg');
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	opacity: 0;
+	background-color: rgba(0, 255, 247, 0.4);
+	color: white;
+	transition: 300ms;
+}
+.img-container:hover::after {
+	opacity: 1;
+}
+.img-container img {
+	width: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.text-container {
+	width: 100%;
+}
+
+.text-main {
+	font-size: 1.4rem;
+	margin: 15px 0;
+	font-weight: 700;
+	cursor: pointer;
+	transition: 300ms;
+}
+.text-main:hover {
+	color: hsl(178, 100%, 50%);
+}
+
+.text-sub {
+	font-size: 1rem;
+	color: hsl(215, 51%, 70%);
+	line-height: 1.4rem;
+	font-weight: 300;
+}
+
+.info-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+
+.info-eth,
+.info-time {
+	display: flex;
+	align-items: center;
+	color: hsl(178, 100%, 50%);
+	font-weight: 700;
+	font-size: 0.8rem;
+}
+.info-time {
+	color: hsl(215, 51%, 70%);
+	font-weight: 400;
+}
+
+.info-eth img {
+	margin-right: 5px;
+	width: 9px;
+}
+.info-time img {
+	width: 15px;
+	margin-right: 5px;
+}
+
+hr {
+	width: 100%;
+	height: 2px;
+	border: none;
+	outline: none;
+	opacity: 0.9;
+	background-color: hsl(215, 32%, 27%);
+}
+
+.avatar-container {
+	width: 100%;
+	margin: 20px 0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.avatar-container img {
+	width: 30px;
+	border-radius: 50%;
+	border: 1px solid hsl(215, 51%, 70%);
+	margin-right: 10px;
+}
+.avatar-text {
+	font-size: 0.9rem;
+	color: hsl(215, 51%, 70%);
+	font-weight: 300;
+}
+
+.avatar-text span {
+	color: white;
+	font-weight: 400;
+	cursor: pointer;
+	transition: 300ms;
+}
+.avatar-text span:hover {
+	color: hsl(178, 100%, 50%);
+}
