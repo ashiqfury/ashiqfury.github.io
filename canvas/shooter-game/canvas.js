@@ -1,4 +1,5 @@
 const canvas = document.querySelector('canvas')
+const topScore = document.querySelector('.score')
 const c = canvas.getContext('2d')
 
 canvas.width = innerWidth
@@ -138,6 +139,7 @@ const spawnEnemies = () => {
 }
 
 let animationId
+let score = 0
 const animate = () => {
 	animationId = requestAnimationFrame(animate)
 	c.fillStyle = 'rgba(0, 0, 0, 0.1)'
@@ -203,11 +205,16 @@ const animate = () => {
 					setTimeout(() => {
 						projectiles.splice(projectileIndex, 1)
 					}, 0)
+
+					score += 50
+					topScore.innerHTML = score
 				} else {
 					setTimeout(() => {
 						enemies.splice(enemyIndex, 1)
 						projectiles.splice(projectileIndex, 1)
 					}, 0)
+					score += 100
+					topScore.innerHTML = score
 				}
 			}
 		})
