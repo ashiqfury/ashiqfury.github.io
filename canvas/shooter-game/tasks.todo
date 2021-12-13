@@ -1,0 +1,13 @@
+Basic Game Checklist:
+  ✔ Create a player @done(21-12-13 20:04)
+  ✔ Shoot projectiles @done(21-12-13 20:32)
+  ✔ Create enemies @done(21-12-13 21:14)
+  ✔ Detect collision on enemy / projectile hit @done(21-12-13 21:14)
+  ✔ Detect collision on enemy / player hit @done(21-12-13 21:29)
+  ✔ Remove off screen projectiles @done(21-12-13 21:29)
+  ✔ Colorize game @done(21-12-13 21:38)
+  ✔ Shrink enemies explosion on hit @done(21-12-13 21:56)
+  ☐ Add score
+  ☐ Add start game button
+  ☐ Add game over UI
+  ☐ Add restart button
