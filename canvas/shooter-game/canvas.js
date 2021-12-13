@@ -1,5 +1,8 @@
 const canvas = document.querySelector('canvas')
 const topScore = document.querySelector('.score')
+const boardScore = document.querySelector('.board-score')
+const scoreBoard = document.querySelector('.score-board')
+const startBtn = document.querySelector('.board-start')
 const c = canvas.getContext('2d')
 
 canvas.width = innerWidth
@@ -8,6 +11,10 @@ canvas.height = innerHeight
 const randomNumberFromRange = (min, max) => {
 	return Math.random() * (max - min) + min
 }
+
+// scoreBoard.style.top = '-100%'
+topScore.innerHTML = 0
+boardScore.innerHTML = 0
 
 class Player {
 	constructor(x, y, radius, color) {
@@ -105,12 +112,17 @@ class Particle {
 }
 
 // create a player
-const player = new Player(canvas.width / 2, canvas.height / 2, 15, 'white')
-player.draw()
+let player = new Player(canvas.width / 2, canvas.height / 2, 15, 'white')
+let projectiles = []
+let enemies = []
+let particles = []
 
-const projectiles = []
-const enemies = []
-const particles = []
+const init = () => {
+	player = new Player(canvas.width / 2, canvas.height / 2, 15, 'white')
+	projectiles = []
+	enemies = []
+	particles = []
+}
 
 // creating enemies
 const spawnEnemies = () => {
@@ -179,6 +191,8 @@ const animate = () => {
 		const distance = Math.hypot(player.x - enemy.x, player.y - enemy.y)
 		if (distance - enemy.radius - player.radius < 0.1) {
 			cancelAnimationFrame(animationId)
+			scoreBoard.style.top = '50%'
+			init()
 		}
 
 		// when enemy touches projectile
@@ -206,22 +220,23 @@ const animate = () => {
 						projectiles.splice(projectileIndex, 1)
 					}, 0)
 
-					score += 50
+					score += 100
 					topScore.innerHTML = score
+					boardScore.innerHTML = score
 				} else {
 					setTimeout(() => {
 						enemies.splice(enemyIndex, 1)
 						projectiles.splice(projectileIndex, 1)
 					}, 0)
-					score += 100
-					topScore.innerHTML = score
+					score += 250
+					boardScore.innerHTML = score
 				}
 			}
 		})
 	})
 }
-animate()
-spawnEnemies()
+// animate()
+// spawnEnemies()
 
 // create a new projectile
 addEventListener('click', e => {
@@ -239,3 +254,11 @@ addEventListener('resize', () => {
 	canvas.width = innerWidth
 	canvas.height = innerHeight
 })
+
+startBtn.onclick = () => {
+	console.log('clicked')
+	scoreBoard.style.top = '-100%'
+	animate()
+	spawnEnemies()
+	init()
+}
