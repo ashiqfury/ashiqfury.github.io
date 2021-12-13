@@ -122,6 +122,9 @@ const init = () => {
 	projectiles = []
 	enemies = []
 	particles = []
+	score = 0
+	topScore.innerHTML = score
+	boardScore.innerHTML = score
 }
 
 // creating enemies
@@ -192,7 +195,6 @@ const animate = () => {
 		if (distance - enemy.radius - player.radius < 0.1) {
 			cancelAnimationFrame(animationId)
 			scoreBoard.style.top = '50%'
-			init()
 		}
 
 		// when enemy touches projectile
@@ -229,6 +231,7 @@ const animate = () => {
 						projectiles.splice(projectileIndex, 1)
 					}, 0)
 					score += 250
+					topScore.innerHTML = score
 					boardScore.innerHTML = score
 				}
 			}
@@ -255,10 +258,9 @@ addEventListener('resize', () => {
 	canvas.height = innerHeight
 })
 
-startBtn.onclick = () => {
-	console.log('clicked')
+startBtn.addEventListener('click', () => {
 	scoreBoard.style.top = '-100%'
+	init()
 	animate()
 	spawnEnemies()
-	init()
-}
+})
