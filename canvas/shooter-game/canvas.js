@@ -1,5 +1,6 @@
 const canvas = document.querySelector('canvas')
 const topScore = document.querySelector('.score')
+const highScore = document.querySelector('.highScore')
 const boardScore = document.querySelector('.board-score')
 const scoreBoard = document.querySelector('.score-board')
 const startBtn = document.querySelector('.board-start')
@@ -12,9 +13,13 @@ const randomNumberFromRange = (min, max) => {
 	return Math.random() * (max - min) + min
 }
 
+let score = 0
+let highscore = localStorage.getItem('highscore')
+highScore.innerHTML = highscore
+
 // scoreBoard.style.top = '-100%'
-topScore.innerHTML = 0
-boardScore.innerHTML = 0
+// topScore.innerHTML = 0
+// boardScore.innerHTML = 0
 
 class Player {
 	constructor(x, y, radius, color) {
@@ -111,11 +116,22 @@ class Particle {
 	}
 }
 
+class Highscore {
+	constructor(score, name) {
+		this.score = score
+		this.name = name
+	}
+	changeScore(newScore) {
+		this.score = newScore
+	}
+}
+
 // create a player
 let player = new Player(canvas.width / 2, canvas.height / 2, 15, 'white')
 let projectiles = []
 let enemies = []
 let particles = []
+let highscoreArray = []
 
 const init = () => {
 	player = new Player(canvas.width / 2, canvas.height / 2, 15, 'white')
@@ -123,6 +139,7 @@ const init = () => {
 	enemies = []
 	particles = []
 	score = 0
+	// highscore = localStorage.getItem('highscore')
 	topScore.innerHTML = score
 	boardScore.innerHTML = score
 }
@@ -154,7 +171,6 @@ const spawnEnemies = () => {
 }
 
 let animationId
-let score = 0
 const animate = () => {
 	animationId = requestAnimationFrame(animate)
 	c.fillStyle = 'rgba(0, 0, 0, 0.1)'
@@ -195,6 +211,14 @@ const animate = () => {
 		if (distance - enemy.radius - player.radius < 0.1) {
 			cancelAnimationFrame(animationId)
 			scoreBoard.style.top = '50%'
+
+			if (localStorage.getItem('highscore') < score) {
+				highscore = score
+				localStorage.setItem('highscore', highscore)
+				highScore.innerHTML = highscore
+			} else {
+				highscore = localStorage.getItem('highscore')
+			}
 		}
 
 		// when enemy touches projectile

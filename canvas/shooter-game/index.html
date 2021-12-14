@@ -40,8 +40,11 @@
 				opacity: 0.8;
 				cursor: default;
 			}
+			.highScoreWrapper span {
+				font-size: 0.85rem;
+			}
 			.score-board {
-				width: 50%;
+				width: 400px;
 				height: 300px;
 				background-color: rgba(255, 255, 255);
 				position: fixed;
@@ -79,14 +82,62 @@
 				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
 				cursor: pointer;
 			}
+			.highscore-board {
+				width: 400px;
+				height: 340px;
+				background-color: rgba(255, 255, 255);
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				border-radius: 10px;
+				transition: 300ms;
+				z-index: 30;
+			}
+			.highscore-para {
+				margin: 40px 0 0;
+			}
+			.board-highscore {
+				font-size: 3rem;
+			}
+			.highscore-board input {
+				width: 70%;
+				margin: 30px 0;
+				padding: 15px;
+				font-size: 1rem;
+				border: 1px solid #40bfbf;
+				border-radius: 20px;
+				outline: none;
+			}
+			.highscore-ok {
+				padding: 10px 20px;
+				width: 40%;
+				border: none;
+				outline: none;
+				background: #40bfbf;
+				color: white;
+				font-size: 1.5rem;
+				border-radius: 20px;
+				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+				cursor: pointer;
+			}
 		</style>
 	</head>
 	<body>
 		<canvas></canvas>
 
 		<div class="score-container">
-			<span class="label">Score: </span>
-			<span class="score">0</span>
+			<div>
+				<span class="label">Score: </span>
+				<span class="score">0</span>
+			</div>
+			<div class="highScoreWrapper">
+				<span class="highLabel">Highscore: </span>
+				<span class="highScore">0</span>
+			</div>
 		</div>
 
 		<div class="score-board">
@@ -94,6 +145,13 @@
 			<span class="board-label">Points</span>
 			<button class="board-start">Start Game</button>
 		</div>
+
+		<!-- <div class="highscore-board">
+			<p class="highscore-para">You acheived a new</p>
+			<h1 class="board-highscore">High Score</h1>
+			<input type="text" placeholder="Enter your name" required />
+			<button class="highscore-ok">Done</button>
+		</div> -->
 
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
