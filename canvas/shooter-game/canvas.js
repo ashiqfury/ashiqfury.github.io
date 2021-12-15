@@ -11,6 +11,7 @@ const startBtn = document.querySelector('.board-start')
 const highScore = document.querySelector('.highScore')
 const doneBtn = document.querySelector('.highscore-ok')
 const highscoreBoard = document.querySelector('.highscore-board')
+const highscoreScore = document.querySelector('.highscore-score')
 
 canvas.width = innerWidth
 canvas.height = innerHeight
@@ -20,12 +21,8 @@ const randomNumberFromRange = (min, max) => {
 }
 
 let score = 0
-let highscore = localStorage.getItem('highscore')
+let highscore = localStorage.getItem('highscore') ? localStorage.getItem('highscore') : 0
 highScore.innerHTML = highscore
-
-// scoreBoard.style.top = '-100%'
-// topScore.innerHTML = 0
-// boardScore.innerHTML = 0
 
 class Player {
 	constructor(x, y, radius, color) {
@@ -133,17 +130,16 @@ const init = () => {
 	projectiles = []
 	enemies = []
 	particles = []
-	score = 0
-	// highscore = localStorage.getItem('highscore')
-	topScore.innerHTML = score
-	boardScore.innerHTML = score
+	// score = 0
+	// topScore.innerHTML = score
+	// boardScore.innerHTML = score
+	topScore.innerHTML = boardScore.innerHTML = score = 0
 }
 
 // creating enemies
 const spawnEnemies = () => {
 	setInterval(() => {
-		let x = undefined
-		let y = undefined
+		let x, y
 		const radius = randomNumberFromRange(5, 30)
 		const color = `hsl(${Math.random() * 255}, 50%, 50%)`
 
@@ -207,11 +203,12 @@ const animate = () => {
 			cancelAnimationFrame(animationId)
 			scoreBoard.style.top = '50%'
 
-			// modifing highscores
+			// modifing highscores when acheiving new highscore
 			if (localStorage.getItem('highscore') < score) {
 				highscore = score
 				localStorage.setItem('highscore', highscore)
 				highScore.innerHTML = highscore
+				highscoreScore.innerHTML = highscore
 				highscoreBoard.style.top = '50%'
 			} else {
 				highscore = localStorage.getItem('highscore')
