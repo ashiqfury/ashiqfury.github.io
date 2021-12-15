@@ -21,6 +21,7 @@ const randomNumberFromRange = (min, max) => {
 }
 
 let score = 0
+let timeout
 let highscore = localStorage.getItem('highscore') ? localStorage.getItem('highscore') : 0
 highScore.innerHTML = highscore
 
@@ -138,7 +139,7 @@ const init = () => {
 
 // creating enemies
 const spawnEnemies = () => {
-	setInterval(() => {
+	timeout = setInterval(() => {
 		let x, y
 		const radius = randomNumberFromRange(5, 30)
 		const color = `hsl(${Math.random() * 255}, 50%, 50%)`
@@ -201,6 +202,7 @@ const animate = () => {
 		const distance = Math.hypot(player.x - enemy.x, player.y - enemy.y)
 		if (distance - enemy.radius - player.radius < 0.1) {
 			cancelAnimationFrame(animationId)
+			clearInterval(timeout)
 			scoreBoard.style.top = '50%'
 
 			// modifing highscores when acheiving new highscore
