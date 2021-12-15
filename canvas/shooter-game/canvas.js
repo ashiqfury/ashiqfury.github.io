@@ -1,10 +1,16 @@
 const canvas = document.querySelector('canvas')
+const c = canvas.getContext('2d')
+
+// score card
 const topScore = document.querySelector('.score')
-const highScore = document.querySelector('.highScore')
 const boardScore = document.querySelector('.board-score')
 const scoreBoard = document.querySelector('.score-board')
 const startBtn = document.querySelector('.board-start')
-const c = canvas.getContext('2d')
+
+// high score card
+const highScore = document.querySelector('.highScore')
+const doneBtn = document.querySelector('.highscore-ok')
+const highscoreBoard = document.querySelector('.highscore-board')
 
 canvas.width = innerWidth
 canvas.height = innerHeight
@@ -116,22 +122,11 @@ class Particle {
 	}
 }
 
-class Highscore {
-	constructor(score, name) {
-		this.score = score
-		this.name = name
-	}
-	changeScore(newScore) {
-		this.score = newScore
-	}
-}
-
 // create a player
 let player = new Player(canvas.width / 2, canvas.height / 2, 15, 'white')
 let projectiles = []
 let enemies = []
 let particles = []
-let highscoreArray = []
 
 const init = () => {
 	player = new Player(canvas.width / 2, canvas.height / 2, 15, 'white')
@@ -212,10 +207,12 @@ const animate = () => {
 			cancelAnimationFrame(animationId)
 			scoreBoard.style.top = '50%'
 
+			// modifing highscores
 			if (localStorage.getItem('highscore') < score) {
 				highscore = score
 				localStorage.setItem('highscore', highscore)
 				highScore.innerHTML = highscore
+				highscoreBoard.style.top = '50%'
 			} else {
 				highscore = localStorage.getItem('highscore')
 			}
@@ -287,4 +284,8 @@ startBtn.addEventListener('click', () => {
 	init()
 	animate()
 	spawnEnemies()
+})
+
+doneBtn.addEventListener('click', () => {
+	highscoreBoard.style.top = '-100%'
 })

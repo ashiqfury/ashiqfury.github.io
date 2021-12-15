@@ -79,13 +79,15 @@
 				font-size: 1.5rem;
 				margin-top: 30px;
 				border-radius: 20px;
-				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
 				cursor: pointer;
+				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
 			}
 			.highscore-board {
-				width: 400px;
-				height: 340px;
-				background-color: rgba(255, 255, 255);
+				width: 500px;
+				height: 400px;
+				background-color: rgb(255, 255, 255);
+				background: linear-gradient(35deg, rgb(0, 255, 255), rgb(255, 0, 255));
+				color: white;
 				position: fixed;
 				top: 50%;
 				left: 50%;
@@ -95,7 +97,8 @@
 				align-items: center;
 				border-radius: 10px;
 				transition: 300ms;
-				z-index: 30;
+				z-index: 40;
+				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
 			}
 			.highscore-para {
 				margin: 40px 0 0;
@@ -103,18 +106,10 @@
 			.board-highscore {
 				font-size: 3rem;
 			}
-			.highscore-board input {
-				width: 70%;
-				margin: 30px 0;
-				padding: 15px;
-				font-size: 1rem;
-				border: 1px solid #40bfbf;
-				border-radius: 20px;
-				outline: none;
-			}
 			.highscore-ok {
 				padding: 10px 20px;
 				width: 40%;
+				margin: 10px 0 20px;
 				border: none;
 				outline: none;
 				background: #40bfbf;
@@ -146,12 +141,11 @@
 			<button class="board-start">Start Game</button>
 		</div>
 
-		<!-- <div class="highscore-board">
+		<div class="highscore-board">
 			<p class="highscore-para">You acheived a new</p>
 			<h1 class="board-highscore">High Score</h1>
-			<input type="text" placeholder="Enter your name" required />
 			<button class="highscore-ok">Done</button>
-		</div> -->
+		</div>
 
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
