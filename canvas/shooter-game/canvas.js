@@ -21,7 +21,6 @@ const randomNumberFromRange = (min, max) => {
 }
 
 let score = 0
-let timeout
 let highscore = localStorage.getItem('highscore') ? localStorage.getItem('highscore') : 0
 highScore.innerHTML = highscore
 
@@ -138,6 +137,7 @@ const init = () => {
 }
 
 // creating enemies
+let timeout
 const spawnEnemies = () => {
 	timeout = setInterval(() => {
 		let x, y
