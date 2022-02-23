@@ -17,7 +17,7 @@ module.exports = {
 				custom: ['Manrope', 'sans-serif'],
 			},
 			backgroundImage: {
-				divider: "url('/images/pattern-divider-desktop.svg')",
+				divider: "url('./images/pattern-divider-desktop.svg')",
 			},
 		},
 	},
