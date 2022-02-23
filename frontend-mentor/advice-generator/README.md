@@ -14,7 +14,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Desktop design for the Advice generator app coding challenge](./screenshot.jpg)
+![Desktop design for the Advice generator app coding challenge](./images/screenshot.jpg)
 
 ## Author
 
