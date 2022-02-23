@@ -1,0 +1,15 @@
+{
+	"name": "advice-generator",
+	"description": "This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+	"version": "1.0.0",
+	"main": "tailwind.config.js",
+	"scripts": {
+		"dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.0.23"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
