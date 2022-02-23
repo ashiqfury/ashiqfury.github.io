@@ -468,8 +468,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.visible {
-  visibility: visible;
+.img {
+  background-image: url('../images/pattern-divider-desktop.svg');
 }
 
 .relative {
@@ -499,18 +499,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex {
   display: flex;
-}
-
-.table {
-  display: table;
-}
-
-.contents {
-  display: contents;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-4 {
@@ -555,25 +543,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 28rem;
 }
 
-.border-collapse {
-  border-collapse: collapse;
-}
-
 .translate-y-2\/4 {
   --tw-translate-y: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .cursor-pointer {
   cursor: pointer;
-}
-
-.resize {
-  resize: both;
 }
 
 .flex-col {
@@ -604,10 +580,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 0px;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .bg-dark-1 {
   --tw-bg-opacity: 1;
   background-color: rgb(27 32 39 / var(--tw-bg-opacity));
@@ -621,10 +593,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(82 255 168 / var(--tw-bg-opacity));
-}
-
-.bg-divider {
-  background-image: url('/images/pattern-divider-desktop.svg');
 }
 
 .bg-cover {
@@ -679,19 +647,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
-.underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-}
-
 .shadow-main {
   --tw-shadow: 30px 40px 5px rgba(32, 37, 45, 0.1), 10px 20px 5px 30px rgba(44, 50, 59, 0.1);
   --tw-shadow-colored: 30px 40px 5px var(--tw-shadow-color), 10px 20px 5px 30px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.outline {
-  outline-style: solid;
 }
 
 .transition-all {

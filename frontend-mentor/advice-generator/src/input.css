@@ -3,4 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+	.img {
+		background-image: url('../images/pattern-divider-desktop.svg');
+	}
 }
