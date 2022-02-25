@@ -476,6 +476,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -509,6 +513,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 3rem;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -537,6 +545,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-12 {
   width: 3rem;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .max-w-md {
@@ -603,6 +615,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-position: center;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-\[14px\] {
+  padding: 14px;
+}
+
 .text-center {
   text-align: center;
 }
@@ -621,6 +649,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.25rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -635,6 +668,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tracking-widest {
   letter-spacing: 0.1em;
+}
+
+.tracking-\[\.25\] {
+  letter-spacing: .25;
+}
+
+.tracking-\[\.55\] {
+  letter-spacing: .55;
+}
+
+.tracking-\[\.25em\] {
+  letter-spacing: .25em;
 }
 
 .text-primary {
