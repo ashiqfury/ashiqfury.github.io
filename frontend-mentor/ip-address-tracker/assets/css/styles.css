@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+	--vd-gray: hsl(0, 0%, 17%);
+	--d-gray: hsl(0, 0%, 59%);
+	--font: 'Rubik', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font: 1rem/1rem var(--font);
+}
+.header {
+	height: 35vh;
+	min-height: 250px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url('../images/pattern-bg.png');
+	background-size: cover;
+	padding: 2rem;
+	z-index: 2;
+	box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 0.349);
+}
+#error {
+	color: rgb(253, 103, 103);
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.349);
+	visibility: hidden;
+	margin-top: 0.5rem;
+}
+.header h1 {
+	color: white;
+	font: 300 1.8rem/2rem var(--font);
+}
+.header__input {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	width: 38%;
+}
+.header__input input,
+.header__input button {
+	outline: none;
+	border: none;
+}
+.header__input input {
+	width: 90%;
+	max-height: 3rem;
+	padding: 0.9rem;
+	border-radius: 10px 0 0 10px;
+	font-size: 1rem;
+}
+.header__input button {
+	width: 10%;
+	height: 3rem;
+	border-radius: 0 10px 10px 0;
+	background: black url('../images/icon-arrow.svg') no-repeat center;
+	z-index: 99;
+	cursor: pointer;
+	transition: all 150ms ease-in;
+}
+.header button:hover {
+	background-color: var(--vd-gray);
+}
+
+.info {
+	width: 75%;
+	height: 130px;
+	margin: 0 auto;
+	padding: 0.3rem 0.3rem 0.3rem 2rem;
+	background-color: white;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+	position: absolute;
+	top: 200px;
+	left: 11%;
+
+	border-radius: 20px;
+	box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 0.041);
+	z-index: 2;
+}
+.info__container {
+	width: 25%;
+	margin: 2rem 2rem 2rem 0;
+}
+.info__title {
+	color: var(--d-gray);
+	font-weight: 700;
+	font-size: 0.75rem;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}
+.info__content {
+	height: 2rem;
+	max-height: 2rem;
+	padding: 1rem 0;
+	font-weight: 500;
+	font-size: 1.3rem;
+	color: var(--vd-gray);
+	border-right: rgba(0, 0, 0, 0.089) 1px solid;
+}
+.info__container:last-of-type .info__content {
+	border: none;
+}
+.map {
+	position: relative;
+	z-index: 1;
+}
+#mapid {
+	height: 62vh;
+}
+
+.attribution {
+	background-color: var(--vd-gray);
+	color: white;
+	font-size: 0.8rem;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 3vh;
+}
+.attribution a {
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+	cursor: pointer;
+}
+.attribution a::before {
+	content: '\00a0 ';
+}
+/* styles for mobile */
+@media (max-width: 425px) {
+	.header {
+		padding: 1rem 0;
+		min-height: 200px;
+		height: 250px;
+		background-size: contain;
+	}
+	.header h1 {
+		font-size: 1.5rem;
+	}
+	.header__input {
+		width: 90%;
+		margin: 1rem auto 0;
+	}
+	.info {
+		flex-direction: column;
+		height: unset;
+		width: 89%;
+		left: 5%;
+		padding: 0.3rem;
+		text-align: center;
+		top: 150px;
+	}
+	.info__container {
+		width: 100%;
+		margin: 0;
+	}
+	.info__title {
+		font-size: 0.6rem;
+		padding-top: 0.5rem;
+	}
+	.info__content {
+		border: none;
+		font-size: 1rem;
+		padding: 0 0 0.5rem;
+		height: unset;
+	}
+	.attribution {
+		font-size: 0.6rem;
+		display: block;
+		text-align: center;
+		padding: 0.2rem;
+	}
+	#mapid {
+		height: 65vh;
+	}
+}
+
+/* loading ring  */
+.lds-ring {
+	display: inline-block;
+	position: relative;
+	width: 10px;
+	height: 10px;
+}
+.lds-ring div {
+	width: 20px;
+	height: 20px;
+	margin: 4px;
+	display: block;
+	position: absolute;
+	border: 2px solid #000;
+	border-radius: 50%;
+	box-sizing: border-box;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #000 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

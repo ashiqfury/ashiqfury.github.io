@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+		<title>Frontend Mentor | IP Address Tracker</title>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+		<link rel="stylesheet" href="./assets/css/styles.css" />
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<h1>IP Address Tracker</h1>
+			<section class="header__input">
+				<input type="text" placeholder="Search for any IP address or domain" id="input" />
+				<button id="submit"></button>
+			</section>
+			<span id="error">Please enter correct ip adress or domain</span>
+		</header>
+
+		<main class="info">
+			<section class="info__container">
+				<h3 class="info__title">IP Address</h3>
+				<p class="info__content" id="ip-result"></p>
+			</section>
+			<section class="info__container">
+				<h3 class="info__title">Location</h3>
+				<p class="info__content" id="location-result"></p>
+			</section>
+			<section class="info__container">
+				<h3 class="info__title">Timezone</h3>
+				<p class="info__content" id="timezone-result">UTC -</p>
+			</section>
+			<section class="info__container">
+				<h3 class="info__title">ISP</h3>
+				<p class="info__content" id="isp-result"></p>
+			</section>
+		</main>
+
+		<section class="map">
+			<div id="mapid"></div>
+		</section>
+
+		<footer class="attribution">
+			Coded by <a href="https://github.com/ashiqfury" target="_blank">Ashiq Fury</a>.
+		</footer>
+
+		<script type="text/javascript" src="./assets/js/secret.js"></script>
+		<script src="./assets/js/script.js" type="module"></script>
+	</body>
+</html>
