@@ -1,7 +1,6 @@
-import { ACCESS_TOKEN, API_KEY } from './secret.js'
-
-const accessToken = ACCESS_TOKEN
-const apiKey = API_KEY
+const accessToken =
+	'pk.eyJ1IjoibGl6YWd1eXZhbiIsImEiOiJja2t4dWk4bXoybmh5MnVzMTc5bGlzNTduIn0.s8wQK6iEM8kjtUIj93KpGw'
+const apiKey = 'at_gOoHkPe5MK7bwyx5ndw66qNT8zNxx'
 
 //geo.ipify.org API data fetch by ip
 const getData = async data => {
