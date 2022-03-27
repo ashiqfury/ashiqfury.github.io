@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.pattern {
+		background: url('../images/bg-tablet-pattern.svg') no-repeat;
+		background-size: 150%;
+		background-position: -20% -80%;
+	}
+	.patternLg {
+		background: url('../images/bg-tablet-pattern.svg') no-repeat;
+		background-position: 120% 180%;
+	}
+	.simplify {
+		background: url('../images/bg-simplify-section-mobile.svg') no-repeat;
+		background-position: center left;
+	}
+	.simplifyLg {
+		background: url('../images/bg-simplify-section-desktop.svg') no-repeat;
+		background-position: center;
+	}
+}
+
+@layer utilities {
+	body.active::after {
+		top: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* hamburger */
+	.menu.active div:first-child {
+		top: 4px;
+		transform: rotate(225deg);
+	}
+	.menu.active div:nth-child(2) {
+		display: none;
+	}
+	.menu.active div:last-child {
+		bottom: 4px;
+		transform: rotate(-225deg);
+	}
+}
+
+@layer base {
+	html::-webkit-scrollbar {
+		width: 7px;
+		background: hsl(228, 39%, 23%);
+	}
+	html::-webkit-scrollbar-thumb {
+		background: hsl(12, 88%, 59%);
+	}
+}
