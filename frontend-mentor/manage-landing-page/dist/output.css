@@ -483,11 +483,6 @@ html::-webkit-scrollbar-thumb {
   background-position: -20% -80%;
 }
 
-.simplify {
-  background: url('../images/bg-simplify-section-mobile.svg') no-repeat;
-  background-position: center left;
-}
-
 .absolute {
   position: absolute;
 }
@@ -817,6 +812,18 @@ html::-webkit-scrollbar-thumb {
 .bg-neutral-blue {
   --tw-bg-opacity: 1;
   background-color: hsl(233 12% 13% / var(--tw-bg-opacity));
+}
+
+.bg-\[url\(\'\.\.\/images\/bg-simplify-section-mobile\.svg\'\)\] {
+  background-image: url('../images/bg-simplify-section-mobile.svg');
+}
+
+.bg-left {
+  background-position: left;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .p-8 {
@@ -1327,8 +1334,8 @@ body.active::after {
     background-color: transparent;
   }
 
-  .lg\:bg-\[url\(\'\/images\/bg-simplify-section-desktop\.svg\'\)\] {
-    background-image: url('/images/bg-simplify-section-desktop.svg');
+  .lg\:bg-\[url\(\'\.\.\/images\/bg-simplify-section-desktop\.svg\'\)\] {
+    background-image: url('../images/bg-simplify-section-desktop.svg');
   }
 
   .lg\:bg-center {
