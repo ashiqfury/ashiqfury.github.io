@@ -24,31 +24,26 @@
 
 @layer utilities {
 	body.active::after {
-		top: 0;
-		opacity: 1;
-		visibility: visible;
+		@apply top-0 visible opacity-100;
 	}
 
 	/* hamburger */
 	.menu.active div:first-child {
-		top: 4px;
-		transform: rotate(225deg);
+		@apply top-1 rotate-[225deg];
 	}
 	.menu.active div:nth-child(2) {
-		display: none;
+		@apply hidden;
 	}
 	.menu.active div:last-child {
-		bottom: 4px;
-		transform: rotate(-225deg);
+		@apply bottom-1 -rotate-[225deg];
 	}
 }
 
 @layer base {
 	html::-webkit-scrollbar {
-		width: 7px;
-		background: hsl(228, 39%, 23%);
+		@apply w-1.5 bg-[#242d52];
 	}
 	html::-webkit-scrollbar-thumb {
-		background: hsl(12, 88%, 59%);
+		@apply bg-[#f25f3a] rounded-xl;
 	}
 }

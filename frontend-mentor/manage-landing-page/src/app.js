@@ -47,6 +47,8 @@ const handleSlider = index => {
 
 // Gsap Animations
 
+// import TweenMax from 'gsap'
+
 TweenMax.from('.logo', 1, {
 	opacity: 0,
 	delay: 1,
